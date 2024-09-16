@@ -9,7 +9,7 @@ string reverse_words(string s , int n)
     {
         if (s[i] != ' ')
             word += s[i];
-        else if (word.size() > 1) // To avoid multiple spaces
+        else if ((word.size() > 1) || (word.size() == 1 && word[0] != ' ')) // To avoid multiple spaces
         {
             ans = word + " " + ans;
             word = "";
